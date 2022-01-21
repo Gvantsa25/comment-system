@@ -1,0 +1,35 @@
+{
+  "name": "omed1",
+  "version": "1.0.0",
+  "description": "JS Development Environment",
+  "scripts": {
+    "start": "babel-node scripts/server.js",
+    "localtunnel": "lt --part 3000",
+    "share": "npm-run-all --parallel start localtunnel",
+    "build": "webpack --config webpack.config.js",
+    "format:all": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint src"
+  },
+  "author": "Gvantsa",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.6.0",
+    "express": "^4.17.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "localtunnel": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "open": "^8.4.0",
+    "prettier": "^2.5.1",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.3.0",
+    "style-loader": "^3.3.1"
+  }
+}

@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(223, 19%, 93%);
+  font-size: 16px;
+  font-family: Rubik, sans-serif;
+  color: hsl(212, 24%, 26%);
+}
+
+#container {
+  max-width: 800px;
+  width: 100%;
+  margin: 100px auto;
+}
+
+#container button {
+  color: white;
+  background: hsl(238, 40%, 52%);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+#container button:hover {
+  background-color: hsl(238, 40%, 30%);
+}
+
+.comment-content {
+  white-space: pre-wrap; /* Webkit */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.comment {
+  background-color: white;
+  padding: 10px;
+  border: 2px solid hsl(223, 19%, 93%);
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+}
+
+.comment-reply {
+  margin-left: 70px;
+}
+
+.comment-content-container {
+  width: 100%;
+  margin: 10px;
+}
+
+.comment-votes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes move {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.update-comment-text {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  width: 95%;
+  border-radius: 10px;
+  animation: move 0.3s ease-in-out;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  border: none;
+  border: 2px solid hsl(238, 40%, 52%);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  outline: none;
+}
